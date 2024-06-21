@@ -1,0 +1,47 @@
+<!-- add.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Add New Cafe</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.cafe.label }}
+            {{ form.cafe(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.location.label }}
+            {{ form.location(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.open_time.label }}
+            {{ form.open_time(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.close_time.label }}
+            {{ form.close_time(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.coffee_rating.label }}
+            {{ form.coffee_rating(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.wifi_rating.label }}
+            {{ form.wifi_rating(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.power_rating.label }}
+            {{ form.power_rating(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

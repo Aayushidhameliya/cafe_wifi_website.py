@@ -1,0 +1,11 @@
+<!-- index.html -->
+{% extends "base.html" %}
+{% block title %}Home - Cafes with Wifi and Power{% endblock %}
+
+{% block content %}
+    <section>
+        <h1>Welcome to Cafes with Wifi and Power!</h1>
+        <p>Find cafes near you that offer wifi and power sockets for remote working.</p>
+        <a href="{{ url_for('cafes') }}" class="btn">View Cafes</a>
+    </section>
+{% endblock %}
